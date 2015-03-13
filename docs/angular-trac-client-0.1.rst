@@ -10,6 +10,12 @@ to fly, which will have the following main components:
 - Travis_ integration.
 - Bower_ integration
 
+Simple Angular App with travis-ci
+---------------------------------
+
+Create a simpe angular app with both unit and e2e test cases.
+that's the start point.
+
 .. _Bower: http://bower.io/
 .. _Travis: https://travis-ci.org/
 .. _angular-phonecat: https://github.com/angular/angular-phonecat

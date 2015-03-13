@@ -34,10 +34,22 @@ Step 2: Angular Templates
 
 This step will start using AngularJS template and will
 also introduce the unit testing for AngularJS app.
+Checkout source code::
 
-Here are the changes in `github <https://github.com/angular/angular-phonecat/compare/step-1...step-2>`_
+  git checkout -f setp-2
+  npm start
+
+Step 3: Angular Filters
+-----------------------
+
+Here are the changes in `github <https://github.com/angular/angular-phonecat/compare/step-1...step-2>`_.
+source code::
+
+  git checkout -f step-3
+  npm start
 
 .. _Angularjs Tutorial: https://docs.angularjs.org/tutorial
 .. _npm: https://www.npmjs.org/
 .. _cfgrepo nodejs sample: https://github.com/leocornus/leocornus.buildout.cfgrepo/tree/master/sample/nodejs
 .. _troubleshoot.rst: https://github.com/seanchen/angular-seed/blob/master/troubleshoot.rst
+.. _unable to find suitable version of angular: https://github.com/angular/angular-phonecat/issues/195

@@ -15,6 +15,23 @@ Simple Angular App with travis-ci
 
 Create a simpe angular app with both unit and e2e test cases.
 that's the start point.
+Here are the folder layout::
+
+  app/
+    - css/
+    - img/
+    - js/
+    - partials/
+    index.html 
+  test/
+    - unit/
+    - e2e/
+    - karma.conf.js
+    - protractor-conf.js
+  .travis.yml
+  README.rst
+  bower.json
+  package.json
 
 .. _Bower: http://bower.io/
 .. _Travis: https://travis-ci.org/

@@ -21,4 +21,4 @@ LICENSE
 `GNU GENERAL PUBLIC LICENSE Version 2 <LICENSE-GPL2.txt>`_
 
 .. |travis-img| image:: https://api.travis-ci.org/leocornus/angular-trac-client.png
-.. _Travis-CI Build Log: https://travis-ci.org/leocornus/angular-trac-client
+.. _Build Log: https://travis-ci.org/leocornus/angular-trac-client

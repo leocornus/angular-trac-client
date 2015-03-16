@@ -5,10 +5,9 @@ The initial release will have a comprehensive AngularJS app ready
 to fly, which will have the following main components:
 
 - follow the typical AngularJS app skeleton...
-- unit testing.
-- e2e testing.
+- unit testing cases.
+- e2e testing cases.
 - Travis_ integration.
-- Bower_ integration
 
 Dependences
 -----------
@@ -16,8 +15,8 @@ Dependences
 - jdk need 1.7.x or higher, the selenium server depends on jdk
 - Xvfg, this is only for linux command line testing...
 
-Simple Angular App with travis-ci
----------------------------------
+Simple Angular App Skeleton
+---------------------------
 
 Create a simpe angular app with both unit and e2e test cases.
 that's the start point.
@@ -33,12 +32,42 @@ Here are the folder layout::
     - unit/
     - e2e/
     - karma.conf.js
-    - protractor-conf.js
+    - protractor.conf.js
+  .bowerrc
   .travis.yml
   README.rst
   bower.json
   package.json
 
+The **app** folder has all the necessary files to deploy this package.
+Very soon, we will have a easy to use script to package all files 
+in one compress file for distribute.
+
+All other folders and files are for development purpose, including:
+
+- dependence management the file **bower.json**.
+- a easy to use npm HTTP server for development and testing,
+  the file **package.json**
+- travis-ci integration, the file **travis.yml**
+- unit and e2e test cases, the foler **test**
+
+The AngularJS tutorial (`angular-phonecat`_) has details intructions.
+
+Test Driven
+-----------
+
+We need get familiar to testing first, both unit and e2e testing.
+The following 3 names are important:
+
+- Karma_
+- Jasmine_
+- Protractor_
+
+Protractor_ homepage has details API reference.
+
 .. _Bower: http://bower.io/
 .. _Travis: https://travis-ci.org/
 .. _angular-phonecat: https://github.com/angular/angular-phonecat
+.. _Protractor: http://angular.github.io/protractor/
+.. _Jasmine: https://github.com/jasmine/jasmine
+.. _Karma: https://github.com/karma-runner/karma

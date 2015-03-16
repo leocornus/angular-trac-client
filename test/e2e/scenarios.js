@@ -22,8 +22,17 @@ describe('my app', function() {
 
     // now testing the simple model.
     var name = element(by.model('name'));
+    // this will simulate the keyboard typing.
     name.sendKeys("a name");
     expect(element(by.id('hello')).getText()).
       toBe('Hello a name!');
+  });
+
+  // try testing the ng-repeat.
+  it("try to verify the list of tickets", function() {
+    // find all li elements.
+    element.all(by.tagName('li')).then(function(items) {
+      expect(items.length).toBe(2);
+    });
   });
 });

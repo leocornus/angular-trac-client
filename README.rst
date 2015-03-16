@@ -1,17 +1,22 @@
-Build Status: |travis-img| `Travis-CI Build Log`_
-
 angular-trac-client
 ===================
+
+|travis-img| `Build Log`_
 
 JavaScript Client for Trac project on AngularJS framework
 
 Releases
-========
+--------
 
 - `Release 0.1 <docs/angular-trac-client-0.1.rst>`_
 
+Stories
+-------
+
+- Xvfb for e2e testing on Linux command line.
+
 LICENSE
-=======
+-------
 
 `GNU GENERAL PUBLIC LICENSE Version 2 <LICENSE-GPL2.txt>`_
 

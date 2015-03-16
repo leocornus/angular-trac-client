@@ -64,6 +64,7 @@ The following 3 names are important:
 - Protractor_
 
 Protractor_ homepage has details API reference.
+Karma_ id config to useing Jasmine_ as the testing framework.
 
 .. _Bower: http://bower.io/
 .. _Travis: https://travis-ci.org/

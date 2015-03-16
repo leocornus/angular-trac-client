@@ -10,6 +10,12 @@ to fly, which will have the following main components:
 - Travis_ integration.
 - Bower_ integration
 
+Dependences
+-----------
+
+- jdk need 1.7.x or higher, the selenium server depends on jdk
+- Xvfg, this is only for linux command line testing...
+
 Simple Angular App with travis-ci
 ---------------------------------
 

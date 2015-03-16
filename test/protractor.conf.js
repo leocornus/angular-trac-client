@@ -9,9 +9,9 @@ exports.config = {
     'browserName': 'firefox'
   },
 
-  chromeOnly: true,
+  chromeOnly: false,
 
-  baseUrl: 'http://localhost:8800/',
+  baseUrl: 'http://localhost:8800/app/',
 
   framework: 'jasmine',
 

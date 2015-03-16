@@ -1,7 +1,7 @@
 angular-trac-client
 ===================
 
-|travis-img| `Build Log`_
+`|travis-img| <https://travis-ci.org/leocornus/angular-trac-client>`_
 
 JavaScript Client for Trac project on AngularJS framework
 

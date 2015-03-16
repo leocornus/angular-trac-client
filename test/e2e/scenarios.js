@@ -19,5 +19,11 @@ describe('my app', function() {
     // now let's find the first p tag.
     expect(element(by.tagName('p')).getText()).
       toMatch("Nothing here yet!");
+
+    // now testing the simple model.
+    var name = element(by.model('name'));
+    name.sendKeys("a name");
+    expect(element(by.id('hello')).getText()).
+      toBe('Hello a name!');
   });
 });

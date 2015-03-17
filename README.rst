@@ -1,6 +1,10 @@
 angular-trac-client
 ===================
 
+.. image:: https://badges.gitter.im/Join%20Chat.svg
+   :alt: Join the chat at https://gitter.im/leocornus/angular-trac-client
+   :target: https://gitter.im/leocornus/angular-trac-client?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
+
 |travis-img|_
 
 JavaScript Client for Trac project on AngularJS framework

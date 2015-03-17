@@ -9,6 +9,13 @@ to fly, which will have the following main components:
 - e2e testing cases.
 - Travis_ integration.
 
+Sprints
+-------
+
+- Release 0.0.1, very basic static template. Some dummy tickets
+  data in the global $scope, unit test cases and e2e test cases.
+- Release 0.0.2
+
 Dependences
 -----------
 

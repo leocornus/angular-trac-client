@@ -35,4 +35,24 @@ describe('my app', function() {
       expect(items.length).toBe(2);
     });
   });
+
+  // testing the filter function.
+  it("filter the ticket list by keyboard typing", function() {
+
+    // protractor locator could find ng-repeat.
+    var tList = element.all(by.repeater('ticket in tickets'));
+    // locator by ng-model
+    var query = element(by.model('query'));
+    // using the count method, 
+    // Q: where is it defined.
+    expect(tList.count()).toBe(2);
+
+    // simulate keyboard typing on query field.
+    query.sendKeys('123');
+    expect(tList.count()).toBe(1);
+
+    query.clear();
+    query.sendKeys('345');
+    expect(tList.count()).toBe(1);
+  });
 });

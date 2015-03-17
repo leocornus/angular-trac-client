@@ -19,6 +19,9 @@ tracHome.controller('TracHomeCtrl', function($scope) {
     },
     {'id': 2345,
      'summary': 'The ticket about use a ticket'
+    },
+    {'id': 4567,
+     'summary': 'The ticket about update a ticket'
     }
   ];
 });

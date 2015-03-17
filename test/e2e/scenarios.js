@@ -32,7 +32,7 @@ describe('my app', function() {
   it("try to verify the list of tickets", function() {
     // find all li elements.
     element.all(by.tagName('li')).then(function(items) {
-      expect(items.length).toBe(2);
+      expect(items.length).toBe(3);
     });
   });
 
@@ -45,14 +45,18 @@ describe('my app', function() {
     var query = element(by.model('query'));
     // using the count method, 
     // Q: where is it defined.
-    expect(tList.count()).toBe(2);
+    expect(tList.count()).toBe(3);
 
     // simulate keyboard typing on query field.
     query.sendKeys('123');
     expect(tList.count()).toBe(1);
 
     query.clear();
-    query.sendKeys('345');
-    expect(tList.count()).toBe(1);
+    query.sendKeys('45');
+    expect(tList.count()).toBe(2);
+
+    query.clear();
+    query.sendKeys('123456');
+    expect(tList.count()).toBe(0);
   });
 });

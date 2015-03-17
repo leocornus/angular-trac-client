@@ -11,14 +11,14 @@ describe('angular trac client controllers', function() {
     beforeEach(module('tracHome'));
     
     // test creating model tickets,
-    it('should create "tickets" model with 2 tickets', 
+    it('should create "tickets" model with 3 tickets', 
        inject(function($controller) {
 
       var ticketsScope = {};
       var ctrl = $controller('TracHomeCtrl', 
                              {$scope:ticketsScope});
-      // we have 2 dummy tickets for testing.
-      expect(ticketsScope.tickets.length).toBe(2);
+      // we have 3 dummy tickets for testing.
+      expect(ticketsScope.tickets.length).toBe(3);
 
       for(var i=0; i < ticketsScope.tickets.length; i++) {
         var ticket = ticketsScope.tickets[i];

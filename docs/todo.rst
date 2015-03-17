@@ -1,5 +1,24 @@
 Some TODOs:
 
+Knowledge Required
+------------------
+
+**JavaScript**
+
+JavaScript is the very basic requirment.
+Mozilla Developer Network (MDN) has a comprehensive
+`JavaScript reference <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>`_
+
+**Selenium**
+
+Selenium is the basic software for e2e testing.
+`Elemental Selenium <http://elementalselenium.com/>`_ 
+has many tips and tricks.
+
+**node.js**
+
+**Xvfg**
+
 Setup Instruction for Windows user
 ----------------------------------
 
@@ -14,7 +33,7 @@ For regular Windows user, the set up should be straitforard.
 - proxy setting for bower,
 - set up protocol for git, using http instead of git.
 - JDK higher than 1.6.x
-- might still need download Seleium Chrome and Firefox drive
+- might still need download Selenium Chrome and Firefox drive
   manually.
 
 Instruction and set up for Xvfb

@@ -13,3 +13,4 @@ Competitors
 
 - `backbone.js <https://github.com/jashkenas/backbone>`_
 - `aurelie <https://github.com/aurelia>`_
+- `Durandal <http://durandaljs.com/>`_

@@ -22,7 +22,7 @@ describe('angular trac client controllers', function() {
 
       for(var i=0; i < ticketsScope.tickets.length; i++) {
         var ticket = ticketsScope.tickets[i];
-        // each ticket is a JavaScript Object, iand it has 2 fields.
+        // each ticket is a JavaScript Object, and it has 2 fields.
         var keys = Object.keys(ticket);
         expect(keys.length).toBe(2);
         // we should know the keys.

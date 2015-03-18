@@ -14,7 +14,8 @@ Sprints
 
 - Release 0.0.1, very basic static template. Some dummy tickets
   data in the global $scope, unit test cases and e2e test cases.
-- Release 0.0.2
+  This releae also had travis-ci set up for ci testing.
+- Release 0.0.2, adding the simple query filter.
 
 Dependences
 -----------

@@ -16,6 +16,9 @@ Sprints
   data in the global $scope, unit test cases and e2e test cases.
   This releae also had travis-ci set up for ci testing.
 - Release 0.0.2, adding the simple query filter.
+- Release 0.0.3, handle ordering: order by and order desc.
+  Faced some challenge to get select tag's value by using protractor.
+  Get around by using the text, which is fine too.
 
 Dependences
 -----------

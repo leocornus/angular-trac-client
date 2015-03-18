@@ -22,6 +22,9 @@ describe('my app', function() {
 
     // now testing the simple model.
     var name = element(by.model('name'));
+    // the value before sendKeys.
+    expect(element(by.id('hello')).getText()).
+      toMatch('Hello !');
     // this will simulate the keyboard typing.
     name.sendKeys("a name");
     expect(element(by.id('hello')).getText()).
@@ -41,10 +44,10 @@ describe('my app', function() {
 
     // protractor locator could find ng-repeat.
     var tList = element.all(by.repeater('ticket in tickets'));
-    // locator by ng-model
+    // locator by ng-model, this is input tag.
     var query = element(by.model('query'));
-    // using the count method, 
-    // Q: where is it defined.
+    // using the count method, which is definded in 
+    // element.all as a method.
     expect(tList.count()).toBe(3);
 
     // simulate keyboard typing on query field.
@@ -58,5 +61,39 @@ describe('my app', function() {
     query.clear();
     query.sendKeys('123456');
     expect(tList.count()).toBe(0);
+  });
+
+  // Testing the order function.
+  it('order the tickets list by order dropdown', function() {
+
+    // get tickets' id list.
+    // the column is defined only for repeater locator.
+    var idList = element.all(by.repeater('ticket in tickets')
+                             .column('ticket.id'));
+    // get the order by model.
+    // this should be html select tag. how we handle this?
+    var orderBy = element(by.model('orderProp')).$('option:checked');
+    // this is the default order.
+    expect(orderBy.getText()).toBe('ID');
+    // Q?: How could I get the value of the selected option?
+
+    // utility function to get all ids.
+    function getIds() {
+      return idList.map(function(elm) {
+        return elm.getText();
+      });
+    }
+
+    // the default sort
+    expect(getIds()).toEqual([
+      '1234', '2345', '4567'
+    ]);
+
+    // simulate the drop down click the sort by summary.
+    element(by.model('orderProp')).$('option[value="summary"]')
+      .click();
+    expect(getIds()).toEqual([
+      '1234', '4567', '2345'
+    ]);
   });
 });

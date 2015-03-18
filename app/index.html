@@ -25,12 +25,18 @@
       <div class="col-md-2">
         <!--Sidebar content-->
         Search: <input ng-model="query">
+        Sort By: 
+        <select ng-model='orderProp'>
+          <option value="summary">Summary</option>
+          <option value="id">ID</option>
+        </select> 
       </div>
       <div class="col-md-10">
         <!--Body content-->
         <ul class="tickets">
-          <li ng-repeat="ticket in tickets | filter:query">
-            {{ticket.id}} - {{ticket.summary}}
+          <li ng-repeat="ticket in tickets | filter:query | orderBy:orderProp">
+            <span class="id">{{ticket.id}}</span> - 
+            <span class="summary">{{ticket.summary}}</span>
           </li>
         <ul>
 

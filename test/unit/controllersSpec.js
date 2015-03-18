@@ -35,7 +35,7 @@ describe('angular trac client controllers', function() {
 
     it('should have the default sort by id', function() {
 
-      // check the default sorting option.s
+      // check the default sorting option, should be by id.
       expect(ticketsScope.orderProp).toBe('id');
     });
   });

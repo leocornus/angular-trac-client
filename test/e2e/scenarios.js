@@ -95,5 +95,19 @@ describe('my app', function() {
     expect(getIds()).toEqual([
       '1234', '4567', '2345'
     ]);
+    
+    // simulate click ID Desc option.
+    // sort by id desc.
+    element(by.model('orderProp')).$('option[value="-id"]').click();
+    expect(getIds()).toEqual([
+      '4567', '2345', '1234'
+    ]);
+
+    // simulate click on Summary option, sort desc.
+    element(by.model('orderProp')).$('option[value="-summary"]')
+            .click();
+    expect(getIds()).toEqual([
+      '2345', '4567', '1234'
+    ]);
   });
 });

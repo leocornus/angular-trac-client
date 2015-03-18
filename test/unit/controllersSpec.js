@@ -7,6 +7,8 @@ describe('angular trac client controllers', function() {
   // the homepage controller.
   describe('TracHomeCtrl', function() {
 
+    var ticketsScope, ctrl;
+
     // before each, load the module.
     beforeEach(module('tracHome'));
     
@@ -14,8 +16,8 @@ describe('angular trac client controllers', function() {
     it('should create "tickets" model with 3 tickets', 
        inject(function($controller) {
 
-      var ticketsScope = {};
-      var ctrl = $controller('TracHomeCtrl', 
+      ticketsScope = {};
+      ctrl = $controller('TracHomeCtrl', 
                              {$scope:ticketsScope});
       // we have 3 dummy tickets for testing.
       expect(ticketsScope.tickets.length).toBe(3);
@@ -30,5 +32,11 @@ describe('angular trac client controllers', function() {
         expect(keys[1]).toMatch('summary');
       }
     }));
+
+    it('should have the default sort by id', function() {
+
+      // check the default sorting option.s
+      expect(ticketsScope.orderProp).toBe('id');
+    });
   });
 });

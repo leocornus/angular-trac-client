@@ -1,5 +1,7 @@
-angular-trac-client |travis-img|_ |gitter-img|_
-===============================================
+|travis-img|_ |gitter-img|_
+
+angular-trac-client 
+===================
 
 JavaScript Client for Trac project on AngularJS framework
 
@@ -7,6 +9,7 @@ Releases
 --------
 
 - `Release 0.1 <docs/angular-trac-client-0.1.rst>`_ [DEVELOPING...]
+- `Release 0.2 <docs/angular-trac-client-0.2.rst>`_ [PLANNING...]
 
 Stories
 -------

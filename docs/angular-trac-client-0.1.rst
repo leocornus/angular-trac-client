@@ -1,6 +1,9 @@
 Release 0.1
 ===========
 
+:STATUS:
+  Developing
+
 The initial release will have a comprehensive AngularJS app ready
 to fly, which will have the following main components:
 
@@ -19,6 +22,8 @@ Sprints
 - Release 0.0.3, handle ordering: order by and order desc.
   Faced some challenge to get select tag's value by using protractor.
   Get around by using the text, which is fine too.
+- Releae 0.0.4, introduce the $http service to load testing tickets 
+  from a json format file.
 
 Dependences
 -----------

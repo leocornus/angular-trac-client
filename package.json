@@ -1,5 +1,5 @@
 {
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "name": "angular-trac-client",
   "description": "An one page trac client using AngularJS",

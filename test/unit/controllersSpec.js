@@ -34,13 +34,16 @@ describe('angular trac client controllers', function() {
         $httpBackend.expectGET('tickets/tickets.json').
             respond([
               {"id": 2345,
-               "summary": "The ticket about use a ticket"
+               "summary": "The ticket about use a ticket",
+               "status" : "new"
               },
               {"id": 1234,
-               "summary": "The ticket about create a ticket"
+               "summary": "The ticket about create a ticket",
+               "status" : "assigned"
               },
               {"id": 4567,
-               "summary": "The ticket about update a ticket"
+               "summary": "The ticket about update a ticket",
+               "status" : "accepted"
               }
             ]);
 
@@ -62,10 +65,11 @@ describe('angular trac client controllers', function() {
         var ticket = ticketsScope.tickets[i];
         // each ticket is a JavaScript Object, and it has 2 fields.
         var keys = Object.keys(ticket);
-        expect(keys.length).toBe(2);
+        expect(keys.length).toBe(3);
         // we should know the keys.
         expect(keys[0]).toMatch('id');
         expect(keys[1]).toMatch('summary');
+        expect(keys[2]).toMatch('status');
       }
     });
 

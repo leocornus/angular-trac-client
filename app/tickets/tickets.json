@@ -1,11 +1,18 @@
 [
   {"id": 2345,
-   "summary": "The ticket about use a ticket"
+   "summary": "The ticket about use a ticket",
+   "status": "new"
   },
   {"id": 1234,
-   "summary": "The ticket about create a ticket"
+   "summary": "The ticket about create a ticket",
+   "status": "accepted"
+  },
+  {"id": 1344,
+   "summary": "The ticket about a closed ticket",
+   "status": "closed"
   },
   {"id": 4567,
-   "summary": "The ticket about update a ticket"
+   "summary": "The ticket about update a ticket",
+   "status": "assigned"
   }
 ]

@@ -35,7 +35,7 @@ describe('my app', function() {
   it("try to verify the list of tickets", function() {
     // find all li elements.
     element.all(by.tagName('li')).then(function(items) {
-      expect(items.length).toBe(3);
+      expect(items.length).toBe(4);
     });
   });
 
@@ -48,7 +48,7 @@ describe('my app', function() {
     var query = element(by.model('query'));
     // using the count method, which is definded in 
     // element.all as a method.
-    expect(tList.count()).toBe(3);
+    expect(tList.count()).toBe(4);
 
     // simulate keyboard typing on query field.
     query.sendKeys('123');
@@ -86,28 +86,28 @@ describe('my app', function() {
 
     // the default sort
     expect(getIds()).toEqual([
-      '1234', '2345', '4567'
+      '1234', '1344', '2345', '4567'
     ]);
 
     // simulate the drop down click the sort by summary.
     element(by.model('orderProp')).$('option[value="summary"]')
       .click();
     expect(getIds()).toEqual([
-      '1234', '4567', '2345'
+      '1344', '1234', '4567', '2345'
     ]);
     
     // simulate click ID Desc option.
     // sort by id desc.
     element(by.model('orderProp')).$('option[value="-id"]').click();
     expect(getIds()).toEqual([
-      '4567', '2345', '1234'
+      '4567', '2345', '1344', '1234'
     ]);
 
     // simulate click on Summary option, sort desc.
     element(by.model('orderProp')).$('option[value="-summary"]')
             .click();
     expect(getIds()).toEqual([
-      '2345', '4567', '1234'
+      '2345', '4567', '1234', '1344'
     ]);
   });
 });

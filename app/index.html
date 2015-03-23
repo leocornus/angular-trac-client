@@ -38,6 +38,7 @@
         <ul class="tickets">
           <li ng-repeat="ticket in tickets | filter:query | orderBy:orderProp">
             <span class="id">{{ticket.id}}</span> - 
+            <span class="status">{{ticket.status}}</span> - 
             <span class="summary">{{ticket.summary}}</span>
           </li>
         <ul>

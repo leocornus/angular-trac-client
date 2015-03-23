@@ -8,17 +8,53 @@ describe('angular trac client controllers', function() {
   describe('TracHomeCtrl', function() {
 
     var ticketsScope, ctrl;
+    // need this to inject http service.
+    var $httpBackend;
 
-    // before each, load the module.
+    // before each test, load the module.
     beforeEach(module('tracHome'));
+
+    /**
+     * inject the service and controler.
+     * read anularjs tutorial setp 5 for more details.
+     * https://docs.angularjs.org/tutorial/step_05
+     *
+     * the methods module and inject are from angular-mock.js.
+     *
+     * As the mock $httpBackend 
+     * https://docs.angularjs.org/api/ngMock/service/$httpBackend
+     * explained, the unit test cases will not sedn XHR or JSONP
+     * request to a real server.
+     * Instead, we will make the request and similate the respose.
+     */
+    beforeEach(
+      inject(function(_$httpBackend_, $rootScope, $controller) {
+        $httpBackend = _$httpBackend_;
+        // here is fake respone for unit testing.
+        $httpBackend.expectGET('tickets/tickets.json').
+            respond([
+              {"id": 2345,
+               "summary": "The ticket about use a ticket"
+              },
+              {"id": 1234,
+               "summary": "The ticket about create a ticket"
+              },
+              {"id": 4567,
+               "summary": "The ticket about update a ticket"
+              }
+            ]);
+
+        ticketsScope = $rootScope.$new();
+        ctrl = $controller('TracHomeCtrl', {$scope: ticketsScope});
+      }));
+
     
     // test creating model tickets,
-    it('should create "tickets" model with 3 tickets', 
-       inject(function($controller) {
+    it('should create "tickets" model with 3 tickets', function() {
 
-      ticketsScope = {};
-      ctrl = $controller('TracHomeCtrl', 
-                             {$scope:ticketsScope});
+      expect(ticketsScope.tickets).toBeUndefined();
+      $httpBackend.flush();
+
       // we have 3 dummy tickets for testing.
       expect(ticketsScope.tickets.length).toBe(3);
 
@@ -31,7 +67,7 @@ describe('angular trac client controllers', function() {
         expect(keys[0]).toMatch('id');
         expect(keys[1]).toMatch('summary');
       }
-    }));
+    });
 
     it('should have the default sort by id', function() {
 

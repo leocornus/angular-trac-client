@@ -110,4 +110,19 @@ describe('my app', function() {
       '2345', '4567', '1234', '1344'
     ]);
   });
+
+  // testing the ticket links.
+  it('should render ticket specific links', function() {
+    // setup the case here, find a ticket for testing.
+    var query = element(by.model('query'));
+    query.sendKeys('1234');
+    // click the first link on the tickets list,
+    // it should only have one.
+    element.all(by.css('.tickets li span a')).first().click();
+    // try to verify the url to a specific ticket.
+    browser.getLocationAbsUrl().then(function(url) {
+      // expect the vlaue after # will be /ticket/1234
+      expect(url.split('#')[1]).toBe('/ticket/1234');
+    });
+  });
 });

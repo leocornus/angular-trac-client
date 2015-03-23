@@ -27,6 +27,10 @@ Sprints
   from a json format file.
   The unit test cases will use simulated respnse to avoid the 
   dependence on a real server.
+- Release 0.0.5, routing and multiple views.
+  Briefly, we will have views to list tickets, add ticket, 
+  upload ticket, view ticket, etc.
+  Also we will adding some actions: delete, close, etc.
 
 Dependences
 -----------

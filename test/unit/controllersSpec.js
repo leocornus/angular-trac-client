@@ -12,7 +12,9 @@ describe('angular trac client controllers', function() {
     var $httpBackend;
 
     // before each test, load the module.
-    beforeEach(module('tracHome'));
+    // now out app moudle has new name, which will
+    // have more than one controller.
+    beforeEach(module('tracHomeControllers'));
 
     /**
      * inject the service and controler.
@@ -78,5 +80,12 @@ describe('angular trac client controllers', function() {
       // check the default sorting option, should be by id.
       expect(ticketsScope.orderProp).toBe('id');
     });
+  });
+
+  // test ticket details controller.
+  describe('TicketDetailCtrl', function() {
+
+    // we will go to the controller by loading a URL like 
+    // http://..../ticket/1234
   });
 });

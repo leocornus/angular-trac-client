@@ -1,0 +1,36 @@
+<div class="container-fluid">
+  <h1>Tickets List</h1>
+
+  <div class="row">
+    <div class="col-md-2">
+      <!--Sidebar content-->
+      Search: <input ng-model="query">
+      Sort By: 
+      <select ng-model='orderProp'>
+        <option value="summary">Summary</option>
+        <option value="-summary">Summary DESC</option>
+        <option value="id">ID</option>
+        <option value="-id">ID Desc</option>
+      </select> 
+    </div>
+    <div class="col-md-10">
+      <!--Body content-->
+      <ul class="tickets">
+        <li ng-repeat="ticket in tickets | filter:query | orderBy:orderProp">
+          <span class="id"><a href="#/ticket/{{ticket.id}}">
+            {{ticket.id}}
+          </a></span> - 
+          <span class="status">{{ticket.status}}</span> - 
+          <span class="summary">{{ticket.summary}}</span>
+        </li>
+      <ul>
+
+    </div>
+  </div>
+
+  <div class="row">
+    <hr/>
+    <h2>Debuging...</h2>
+    <pre>{{tickets | filter:query | orderBy:orderProp | json}}</pre>
+  </div>
+</div>

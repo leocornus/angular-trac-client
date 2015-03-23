@@ -11,6 +11,7 @@ to fly, which will have the following main components:
 - unit testing cases.
 - e2e testing cases.
 - Travis_ integration.
+- json file on server side as the backend.
 
 Sprints
 -------
@@ -22,8 +23,10 @@ Sprints
 - Release 0.0.3, handle ordering: order by and order desc.
   Faced some challenge to get select tag's value by using protractor.
   Get around by using the text, which is fine too.
-- Releae 0.0.4, introduce the $http service to load testing tickets 
+- Release 0.0.4, introduce the $http service to load testing tickets 
   from a json format file.
+  The unit test cases will use simulated respnse to avoid the 
+  dependence on a real server.
 
 Dependences
 -----------

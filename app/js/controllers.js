@@ -10,21 +10,14 @@ var tracHome = angular.module('tracHome', []);
  * define the trac homepage controller with only $scope
  * directive now.
  */
-tracHome.controller('TracHomeCtrl', function($scope) {
+tracHome.controller('TracHomeCtrl', 
+                    ['$scope', '$http', function($scope, $http) {
 
-  // we will start with a simple list of dummy data.
-  $scope.tickets = [
-    {'id': 2345,
-     'summary': 'The ticket about use a ticket'
-    },
-    {'id': 1234,
-     'summary': 'The ticket about create a ticket'
-    },
-    {'id': 4567,
-     'summary': 'The ticket about update a ticket'
-    }
-  ];
+  $http.get('tickets/tickets.json').success(function(data) {
+    // set the testing data to $scope.
+    $scope.tickets = data;
+  });
 
   // set the default sort by...
   $scope.orderProp = 'id';
-});
+}]);

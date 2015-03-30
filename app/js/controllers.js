@@ -28,10 +28,16 @@ tracHomeControllers.controller('TracHomeCtrl',
  * define the ticket details controller here.
  */
 tracHomeControllers.controller('TicketDetailCtrl',
-    ['$scope', '$routeParams',
-     function($scope, $routeParams) {
+    ['$scope', '$routeParams', '$http',
+     function($scope, $routeParams, $http) {
        // set up the ticket id as parameter.
        $scope.ticketId = $routeParams.ticketId;
+       // using the $http service to read ticket detials from 
+       // server.
+       $http.get('tickets/' + $routeParams.ticketId + '.json').
+           success(function(data) {
+             $scope.ticket = data;
+           });
      }
     ]
 );

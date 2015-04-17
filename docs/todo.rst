@@ -36,6 +36,8 @@ For regular Windows user, the set up should be straitforard.
 - might still need download Selenium Chrome and Firefox drive
   manually.
 
+TODO: Need details intruction for install Selenium drives.
+
 Instruction and set up for Xvfb
 -------------------------------
 
@@ -47,3 +49,10 @@ continuous integration testing.
 - Xvfb init script
 - Xvfb **DISPLAY** settings
 - $ export DISPLAY=:99
+
+Using Font Awesome icons
+------------------------
+
+`Font Awesome`_ is awesome
+
+.. _Font Awesome: https://github.com/FortAwesome/Font-Awesome

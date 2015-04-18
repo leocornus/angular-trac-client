@@ -17,8 +17,6 @@ has many tips and tricks.
 
 **node.js**
 
-**Xvfg**
-
 Setup Instruction for Windows user
 ----------------------------------
 

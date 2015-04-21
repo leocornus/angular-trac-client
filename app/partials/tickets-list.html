@@ -17,6 +17,7 @@
       <!--Body content-->
       <ul class="tickets">
         <li ng-repeat="ticket in tickets | filter:query | orderBy:orderProp">
+          <i class="fa fa-tasks"></i>
           <span class="id"><a href="#/ticket/{{ticket.id}}">
             {{ticket.id}}
           </a></span> - 

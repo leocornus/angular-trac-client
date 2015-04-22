@@ -1,3 +1,5 @@
+var HtmlReporter = require('protractor-html-screenshot-reporter');
+
 exports.config = {
   allScriptsTimeout: 11000,
 
@@ -14,6 +16,12 @@ exports.config = {
   baseUrl: 'http://localhost:8800/app/',
 
   framework: 'jasmine',
+
+  onPrepare: function() {
+    jasmine.getEnv().addReporter(new HtmlReporter({
+      baseDirectory: 'screenshots'
+    }));
+  },
 
   jasmineNodeOpts: {
     defaultTimeoutInterval: 30000

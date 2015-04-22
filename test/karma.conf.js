@@ -12,6 +12,7 @@ module.exports = function(config){
     ],
 
     autoWatch : true,
+    singleRun: true,
 
     frameworks: ['jasmine'],
 
@@ -22,6 +23,10 @@ module.exports = function(config){
             'karma-firefox-launcher',
             'karma-jasmine'
             ],
+
+    colors : false,
+
+    reporters: ['dots'],
 
     junitReporter : {
       outputFile: 'test_out/unit.xml',

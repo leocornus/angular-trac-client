@@ -23,8 +23,7 @@
     "start": "http-server -a 0.0.0.0 -p 8800",
 
     "pretest": "npm install",
-    "test-full": "node node_modules/karma/bin/karma start test/karma.conf.js",
-    "test": "node node_modules/karma/bin/karma start test/karma.conf.js  --single-run --no-auto-watch --reporters=dots --browsers=Firefox",
+    "test": "node node_modules/karma/bin/karma start test/karma.conf.js",
 
     "preupdate-webdriver": "npm install",
     "update-webdriver": "webdriver-manager update",

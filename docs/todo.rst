@@ -17,6 +17,14 @@ has many tips and tricks.
 
 **node.js**
 
+Karma and Protractor mediawiki reporters
+----------------------------------------
+
+create a Karma test reporter plugin to store the test result
+directly into MediaWiki.
+Create a protractor plugin to save the test result
+into mediawiki
+
 Setup Instruction for Windows user
 ----------------------------------
 

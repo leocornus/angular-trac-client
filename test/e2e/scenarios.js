@@ -3,7 +3,7 @@
 /* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 
 // describe is the syntax from Jasmine framework,
-describe('my app', function() {
+describe('Angular Trac Client', function() {
 
   beforeEach(function() {
     // browser is a global created by Protractor.

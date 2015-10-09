@@ -55,3 +55,19 @@ Example of start stop script, normally in file **/etc/init.d/Xvfb**::
   exit 0
 
 .. _Xvfb: https://en.wikipedia.org/wiki/Xvfb
+
+Xvfb on Ubuntu
+--------------
+
+Install Xvfb in ubunbtu::
+
+  $ sudo aptitude install Xvfb
+
+starthe Xvfb server on display :99::
+
+  $ sudo Xvfb :99 -screen 0 1024x768x24 &
+
+set the display before the end to end testing::
+
+  $ export IDSPLAY=:99
+
